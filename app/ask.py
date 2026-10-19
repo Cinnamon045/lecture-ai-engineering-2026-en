@@ -25,8 +25,13 @@ def ask(question: str) -> str:
     client = genai.Client(api_key=get_api_key())
     response = client.models.generate_content(model=MODEL, contents=question)
 
-    # TODO(Lecture 01 exercise): use response.usage_metadata to
-    #   display input and output token counts (you may ask Copilot)
+    usage = response.usage_metadata
+    if usage:
+        print(
+            f"[tokens] input={usage.prompt_token_count} "
+            f"output={usage.candidates_token_count} "
+            f"total={usage.total_token_count}"
+        )
 
     return response.text
 
