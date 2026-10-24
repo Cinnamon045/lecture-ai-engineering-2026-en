@@ -35,11 +35,46 @@ def ask(question: str) -> str:
 
     return response.text
 
+def chat_loop() -> None:
+    client = genai.Client(api_key=get_api_key())
+    chat = client.chats.create(model=MODEL)
+
+    print(f"[model] {MODEL}")
+    print("Chat mode. Type 'exit' or press Enter on an empty line to quit.\n")
+
+    while True:
+        question = input("You: ").strip()
+        if question.lower() in ("exit", "quit", ""):
+            break
+
+        try:
+            response = chat.send_message(question)
+        except errors.APIError as e:
+            print(api_error_message(e.code, e.message))
+            continue
+
+        print(f"Model: {response.text}")
+
+        usage = response.usage_metadata
+        if usage:
+            print(
+                f"[tokens] input={usage.prompt_token_count} "
+                f"output={usage.candidates_token_count} "
+                f"total={usage.total_token_count}\n"
+            )
+
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Ask a bare LLM a question")
     parser.add_argument("question", nargs="?", default=DEFAULT_QUESTION)
+    parser.add_argument(
+        "--chat", action="store_true", help="Interactive chat that keeps history"
+    )
     args = parser.parse_args()
+
+    if args.chat:
+        chat_loop()
+        return
 
     print(f"[model] {MODEL}")
     print(f"[question] {args.question}\n")
