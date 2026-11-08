@@ -5,6 +5,7 @@ Rewriting descriptions changes whether the model uses a tool and which arguments
 """
 
 import json
+import random
 from functools import cache
 from pathlib import Path
 
@@ -27,6 +28,20 @@ def _names(entry: dict) -> list[str]:
         _normalize(a) for a in entry["aliases"]
     ]
 
+def make_quiz(lecture: int) -> str:
+    """Pick one term from the given lecture and return a review question and its answer.
+
+    Use when asked for review questions, such as "Give me a review question for Lecture 2".
+    Ask the learner the question first and do not reveal the answer until they have tried.
+    """
+    terms = [e for e in load_glossary() if e["lecture"] == lecture]
+    if not terms:
+        return f"No glossary terms found for Lecture {lecture:02d}."
+    entry = random.choice(terms)
+    return json.dumps(
+        {"question": f"What is {entry['term']}?", "answer": entry["definition"]},
+        ensure_ascii=False,
+    )
 
 def search_glossary(query: str) -> str:
     """Search the course glossary and return definitions and the sessions that cover the terms.
