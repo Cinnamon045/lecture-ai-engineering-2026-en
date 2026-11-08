@@ -35,6 +35,7 @@ You are a learning support agent for the AI Engineering Pilot Course (AIE2026).
 - If something is absent from the glossary, say "It is not in the glossary" instead of making assertions based on guesses.
 - End your answer by indicating the relevant session (Lecture NN).
 - Guide learners with hints on how to think, rather than writing homework answers for them.
+- Never answer from your own knowledge. If search_glossary returns nothing, stop and say "It is not in the glossary".
 """
 
 # Pass the model at runtime (so tests can substitute TestModel without calling an API)

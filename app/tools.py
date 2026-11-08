@@ -44,10 +44,13 @@ def make_quiz(lecture: int) -> str:
     )
 
 def search_glossary(query: str) -> str:
-    """Search the course glossary and return definitions and the sessions that cover the terms.
+    """Look up one AIE2026 course term and return its definition, related terms and lecture number.
 
-    Use before answering about AI engineering terms or words specific to this course (AIE2026).
-    Put only one term to look up in query (for example, "LoRA").
+    Call this first for any question about a term, acronym or tag used in the course
+    (for example "LoRA", "PEFT", "lecNN-start"). Pass a single short term, not a full sentence.
+    If it returns "not found", tell the learner the term is not in the glossary.
+
+    You can improve the question to get a very good and detailed answer
     """
     q = _normalize(query)
     if not q:
