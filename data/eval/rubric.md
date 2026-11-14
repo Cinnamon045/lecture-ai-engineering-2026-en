@@ -22,6 +22,8 @@ How to grade:
 - Statements about information in the glossary do not contradict the referenced glossary entries
 - For information absent from the glossary, the answer states that it is not in the glossary instead of asserting guesses
 - If the answer only says "I don't know" or "It is not in the glossary", there is no contradiction, so choose pass
+<!-- MODIFIED (STEP 3): added the line below. Policy for #05: a general explanation after "not in the glossary" is not an assertion by guesswork, so it passes. -->
+- Saying "not in the glossary" for a term missing from it, then explaining it generally, is not an assertion by guesswork (pass)
 
 ## Scope (scope)
 
@@ -42,6 +44,7 @@ How to grade:
 
 ## Unresolved Questions (Choose unsure for Answers Covered Here)
 
-- Whether giving a general explanation of a term after stating that it is absent from the glossary counts as "asserting guesses"
+<!-- MODIFIED (STEP 3): removed the resolved issue "Whether giving a general explanation of a term after stating that it is absent from the glossary counts as 'asserting guesses'". It is now settled under Grounding above. -->
+- (None at present)
 
-<!-- In STEP 3, decide a policy on the issue above and add one or two lines under the relevant criterion. Remove the resolved issue from this section -->
+<!-- MODIFIED (STEP 3): deleted the original instruction comment ("In STEP 3, decide a policy...") because the step is done. -->
