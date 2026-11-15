@@ -17,6 +17,10 @@ How to grade:
 - Write the reason in one or two English sentences, before deciding the verdict
 - For answers covered by "Unresolved Questions", choose unsure rather than pass / fail
 
+Explainability:
+
+- Add a single line statement for each criterion that does not meet a perfect score
+
 ## Grounding (grounding)
 
 - Statements about information in the glossary do not contradict the referenced glossary entries
