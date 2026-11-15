@@ -17,9 +17,15 @@ How to grade:
 - Write the reason in one or two English sentences, before deciding the verdict
 - For answers covered by "Unresolved Questions", choose unsure rather than pass / fail
 
-Explainability:
+## Explainability 
 
-- Add a single line statement for each criterion that does not meet a perfect score. Suggest a way to improve the score
+- Applies only to criteria you judged fail (or unsure). For pass, write the reason as usual and do not add a suggestion
+- For each such criterion, write the reason in two parts in the same field:
+  1. Why it failed (one sentence, citing the specific part of the answer)
+  2. Start the second sentence with "Suggestion:" and give one concrete change that would make it pass
+- A suggestion must be actionable and specific to this answer, for example "Replace the full code with a hint about which function to call" instead of "Be more helpful"
+- Base suggestions on the references and this rubric, not on your own knowledge
+- Keep the reason to two sentences in total
 
 ## Grounding (grounding)
 
