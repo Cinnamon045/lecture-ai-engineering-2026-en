@@ -1,0 +1,22 @@
+[model] gemini-3.1-flash-lite
+To understand the difference between Retrieval-Augmented Generation (RAG) and fine-tuning, it helps to think about the difference between **giving a model an open-book exam** versus **studying to change the model's internal knowledge**.
+
+According to the course glossary, **fine-tuning** involves further training a pre-trained model on specific data. It is particularly effective for teaching a model to adopt a certain tone, follow a specific output format, or handle behaviors in a specialized domain.
+
+On the other hand, RAG functions by allowing the model to consult external data sources (like documents or databases) in real-time. As noted in the glossary entry for fine-tuning, when you need a model to have access to up-to-date facts or specific external information, using tools or RAG is generally more suitable than fine-tuning.
+
+**A hint for your thinking:**
+When deciding between the two, consider:
+1. Does the model need to learn a new "style" or "personality" (which suggests fine-tuning)?
+2. Or does the model need to look up accurate, changing information to answer a user's question (which suggests RAG)?
+
+Relevant sessions:
+* Fine-tuning is covered in **Lecture 02**.
+* RAG concepts are introduced in the context of augmenting model capabilities.
+
+--- trace ---
+[tool call]   search_glossary({'query': 'RAG'})
+[tool return] search_glossary -> [{"term": "Agreement rate", "lecture": 4, "definition": "The proportion of cases where two judgments (human and LLM, or …
+[tool call]   search_glossary({'query': 'RAG'})
+[tool return] search_glossary -> [{"term": "Agreement rate", "lecture": 4, "definition": "The proportion of cases where two judgments (human and LLM, or …
+[usage] RunUsage(cost=Decimal('0.00091875'), details={'text_prompt_tokens': 1785}, input_text_tokens=1785, input_tokens=1785, output_tokens=315, requests=3, tool_calls=2)

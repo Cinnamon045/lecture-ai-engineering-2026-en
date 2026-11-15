@@ -1,0 +1,17 @@
+[model] gemini-3.1-flash-lite
+In the context of this course, an **AI agent** is defined as a system designed to achieve a specific goal by operating within a loop. You can think of its core structure as: **model + loop + tools**.
+
+Instead of just providing a single response, the agent uses an **agent loop** where it decides which tools to call, examines the output from those tools, and then determines its next step. This process repeats until the agent has reached a conclusion or completed the task.
+
+To help you understand this better, try thinking about these questions:
+*   How is the agent's process different from simply asking an LLM a question and getting a one-off answer?
+*   Why do you think the "loop" is essential for an agent to be more autonomous than a standard chatbot?
+
+You can explore more about the mechanics of this loop in the session that introduces agentic workflows.
+
+Relevant Session: Lecture 03
+
+--- trace ---
+[tool call]   search_glossary({'query': 'agent'})
+[tool return] search_glossary -> [{"term": "AI agent", "lecture": 3, "definition": "A system that achieves a goal through a loop in which an LLM decides …
+[usage] RunUsage(cost=Decimal('0.0005325'), details={'text_prompt_tokens': 870}, input_text_tokens=870, input_tokens=870, output_tokens=210, requests=2, tool_calls=1)

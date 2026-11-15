@@ -1,0 +1,17 @@
+[model] gemini-3.1-flash-lite
+In the context of the course, `requires_approval=True` is a mechanism used for **Human-in-the-loop** processes.
+
+When you define a tool with this parameter, it acts as a safety measure. Instead of the agent executing the tool immediately, the system pauses to allow a human to review and confirm the action. This is particularly important for operations that are "difficult to undo," such as sending emails, deleting data, or making external API calls.
+
+To understand this better, consider:
+*   Why might an autonomous agent need a human to verify its decisions before it performs a task?
+*   Think about the workflow of an agent: if it decides to perform an action, where in that loop would a human need to step in to say "yes" or "no"?
+
+You can find more on how this fits into the broader design of agent workflows in the relevant session.
+
+(Lecture 03)
+
+--- trace ---
+[tool call]   search_glossary({'query': 'requires_approval'})
+[tool return] search_glossary -> [{"term": "Human-in-the-loop", "lecture": 3, "definition": "Incorporating human confirmation or approval into agent proc…
+[usage] RunUsage(cost=Decimal('0.00049525'), details={'text_prompt_tokens': 709}, input_text_tokens=709, input_tokens=709, output_tokens=212, requests=2, tool_calls=1)

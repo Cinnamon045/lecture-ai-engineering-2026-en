@@ -1,0 +1,13 @@
+[model] gemini-3.1-flash-lite
+MCP stands for **Model Context Protocol**. It is an open standard designed to simplify how AI applications connect to external tools and data sources.
+
+Think of it as a universal "adapter" or "socket" for AI. Instead of building unique connections for every single data source or tool (like a database, file system, or web search), developers can build an **MCP server** once. That server can then be used by any **MCP client**—such as AI agents, IDEs (like Cursor), or chat interfaces (like Claude Desktop)—that supports the protocol.
+
+To understand how this helps AI agents interact with the world, you might want to look at how a client fetches tools from a server.
+
+Relevant sessions: Lecture 03, Lecture 06
+
+--- trace ---
+[tool call]   search_glossary({'query': 'MCP'})
+[tool return] search_glossary -> [{"term": "MCP (Model Context Protocol)", "lecture": 3, "definition": "An open standard protocol connecting AI applicati…
+[usage] RunUsage(cost=Decimal('0.0004945'), details={'text_prompt_tokens': 940}, input_text_tokens=940, input_tokens=940, output_tokens=173, requests=2, tool_calls=1)

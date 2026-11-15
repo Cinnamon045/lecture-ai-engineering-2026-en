@@ -1,0 +1,15 @@
+[model] gemini-3.1-flash-lite
+It is not in the glossary.
+
+In the context of AI engineering, you can think of a vector database as a specialized storage system designed to handle data in the form of mathematical vectors—which are essentially lists of numbers representing the semantic meaning of data (like text, images, or audio).
+
+Instead of searching for exact keyword matches like a traditional database, these systems allow you to perform "similarity searches" to find items that are contextually or semantically related.
+
+To get a better idea of how these are applied in modern workflows (such as retrieval-augmented generation), I recommend checking the summary for the session where we discuss knowledge retrieval and vector search.
+
+Relevant session: Lecture 04
+
+--- trace ---
+[tool call]   search_glossary({'query': 'vector database'})
+[tool return] search_glossary -> The term 'vector database' was not found in the glossary.…
+[usage] RunUsage(cost=Decimal('0.00039825'), details={'text_prompt_tokens': 639}, input_text_tokens=639, input_tokens=639, output_tokens=159, requests=2, tool_calls=1)

@@ -1,0 +1,7 @@
+[model] gemini-3.1-flash-lite
+The key points for Lecture 14 are not currently available. Please let me know if you would like a summary for one of the other sessions (01, 02, 03, 04, or 06).
+
+--- trace ---
+[tool call]   get_lecture_summary({'lecture': 14})
+[tool return] get_lecture_summary -> Key points for Lecture 14 are not available yet. Available sessions: 01, 02, 03, 04, 06…
+[usage] RunUsage(cost=Decimal('0.00026600'), details={'text_prompt_tokens': 662}, input_text_tokens=662, input_tokens=662, output_tokens=67, requests=2, tool_calls=1)

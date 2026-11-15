@@ -1,0 +1,17 @@
+[model] gemini-3.1-flash-lite
+LoRA stands for **Low-Rank Adaptation**. 
+
+Instead of training an entire massive model, which is computationally expensive, LoRA is a technique that keeps the original, pre-trained model weights "frozen." It then injects small, trainable matrices into the model architecture. 
+
+To help you understand how it works, think about it this way: 
+*   **Efficiency:** Rather than retraining billions of parameters, you only train these small, added matrices.
+*   **Storage:** Because you aren't saving a whole new model, the resulting "adapters" are very small files that you can easily swap out.
+
+When considering its effectiveness, think about the trade-off between the size of these small matrices (the "rank") and the ability of the model to learn new tasks. Why might a higher rank allow for better performance but consume more memory?
+
+Relevant Session: Lecture 02
+
+--- trace ---
+[tool call]   search_glossary({'query': 'LoRA'})
+[tool return] search_glossary -> [{"term": "LoRA", "lecture": 2, "definition": "A PEFT method that freezes pretrained weights, represents weight updates …
+[usage] RunUsage(cost=Decimal('0.00052525'), details={'text_prompt_tokens': 883}, input_text_tokens=883, input_tokens=883, output_tokens=203, requests=2, tool_calls=1)

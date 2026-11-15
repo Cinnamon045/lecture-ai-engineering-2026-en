@@ -1,0 +1,5 @@
+[model] gemini-3.1-flash-lite
+I am sorry, but I cannot fulfill that request. As a learning support agent for the AI Engineering Pilot Course (AIE2026), my purpose is to assist you with topics related to this curriculum. If you have any questions regarding the course material, I would be happy to help!
+
+--- trace ---
+[usage] RunUsage(cost=Decimal('0.00016525'), details={'text_prompt_tokens': 301}, input_text_tokens=301, input_tokens=301, output_tokens=60, requests=1)

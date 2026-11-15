@@ -1,0 +1,22 @@
+[model] gemini-3.1-flash-lite
+As an AI engineering tutor, I cannot write the code for your homework assignment directly, as that would bypass the learning process. My role is to help you understand the concepts so you can build the tool yourself.
+
+To create a `save_learning_log` tool, you should follow these steps:
+
+1.  **Define the Goal:** What information do you need to store? Usually, a learning log involves a timestamp, the topic being studied, and your personal reflections or summaries.
+2.  **Determine the Format:** Are you saving this to a simple text file (`.txt`), a JSON file (which is great for structured data), or a database?
+3.  **Structure the Function:**
+    *   What arguments does your function need to accept (e.g., `topic`, `content`)?
+    *   How will you handle file I/O (Input/Output) in Python? You will likely need to use the `open()` function in 'append' mode (`'a'`).
+4.  **Error Handling:** Consider what happens if the file doesn't exist or if the user forgets to input data. Adding a `try-except` block is a good best practice.
+
+**To get started, try answering these questions:**
+*   Which file format do you think is best for your learning logs, and why?
+*   How would you write a basic Python function that takes a string as input and writes it to a `.txt` file?
+
+If you have specific questions about the tools introduced in the course, I can help you look them up in the glossary or lecture summaries.
+
+(Relevant Session: Lecture 01)
+
+--- trace ---
+[usage] RunUsage(cost=Decimal('0.00059475'), details={'text_prompt_tokens': 303}, input_text_tokens=303, input_tokens=303, output_tokens=346, requests=1)

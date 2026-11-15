@@ -1,0 +1,7 @@
+[model] gemini-3.1-flash-lite
+I am your learning support agent for the AI Engineering Pilot Course (AIE2026), and I am here to help you with questions related to our course material, technical concepts, and learning objectives.
+
+I do not have information regarding local restaurants or campus amenities. If you have any questions about the course content, technical terms, or upcoming lecture topics, I would be happy to help you with those!
+
+--- trace ---
+[usage] RunUsage(cost=Decimal('0.0001990'), details={'text_prompt_tokens': 298}, input_text_tokens=298, input_tokens=298, output_tokens=83, requests=1)
