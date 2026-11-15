@@ -19,7 +19,7 @@ How to grade:
 
 Explainability:
 
-- Add a single line statement for each criterion that does not meet a perfect score
+- Add a single line statement for each criterion that does not meet a perfect score. Suggest a way to improve the score
 
 ## Grounding (grounding)
 
