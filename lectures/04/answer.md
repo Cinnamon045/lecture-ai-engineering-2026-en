@@ -43,6 +43,40 @@ Overall, a single clear rule can remove ambiguity and raise automatic coverage, 
 ## Homework
 
 - Level attempted: Basic / Implementation / Advanced
+
+Implementation
+
 - What you did:
+
+Wrote 10 evaluation questions, each with an expected behavior, covering normal glossary questions (LoRA, MCP, human-in-the-loop), a term not in the glossary (RAG, vector database), a nonexistent lecture (Lecture 14), an out-of-scope question (restaurant), a role-change attempt, a homework request (full code), and a clarity case (what is an agent).
+
+ Generated answers with my own Lecture 3 agent (`uv run python -m app.agent "<question>" --trace`), using a shell script to run all 10 questions and a Python script to split each answer from its trace.
+
+Built `data/eval/my_cases.jsonl` in the same format as the instructor's `lec04_cases.jsonl`, with glossary ids taken from `data/glossary.json`.
+
+Labeled the 10 cases in the annotate app (pass/fail on 5 criteria) and saved them to `lectures/04/my_labels.jsonl`.
+
+Compared which criteria are better judged by code and which by the LLM
+
 - Results:
+
+Agreement by criterion: Grounding 9/10, Scope 10/10, Hint 10/10, Clarity 10/10, Lecture marker (code) 7/10.
+
+Overall agreement 7/10, coverage 100% (10/10 judged automatically), needs review 0.
+
+Disagreements (4):
+
+    - #02 Grounding (LLM=fail, me=pass): the answer defined fine-tuning correctly but did not say RAG is missing from the glossary and gave its own RAG definition. The LLM added a suggestion: state explicitly that RAG is not in the glossary first. 
+    - #02 Lecture marker (code=fail, me=pass): the answer has glossary content but no "Lecture N" on the final line, so the code is right and my label was lenient.
+    - #06 and #07 Lecture marker (code=fail, me=pass): both are refusals (restaurant, role change) with no lecture to cite, so I think no marker is needed.
+
 - Observations and questions:
+
+The code check for the lecture marker is rigid: it fails refusals that need no marker. It could run only when a case has glossary references or the agent called a tool.
+
+Code can only check that a marker exists, not that it is the right lecture. For example, Q8 (homework on tool approval) cited Lecture 01 instead of Lecture 3, so correctness needs an LLM or a lookup.
+
+Agreement on my set (7/10 overall) is higher than on the instructor's set, probably because my cases are clearer cut and there are only 10 of them.
+
+
+
